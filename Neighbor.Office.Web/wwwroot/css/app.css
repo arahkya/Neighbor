@@ -1,0 +1,51 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('BlazorError.css');
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 90vh;
+    width: 90vw;
+    margin:auto;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 200px 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "top-header top-header"
+        "left-nav right-display";    
+}
+
+.top-header {
+    grid-area: top-header;    
+}
+
+.left-nav {
+    grid-area: left-nav;
+}
+
+.right-display {
+    grid-area: right-display;
+    border: .3px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 0px 25px 50px 25px;
+    background-color:white;
+    filter: drop-shadow(0px 0px 10px lightgray);
+}
+
+@media(max-width: 1024px){
+    #app {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "top-header"
+            "left-nav"
+            "right-display";
+    }
+
+    .left-nav {
+        margin: 0 0 30px 0;
+    }
+}

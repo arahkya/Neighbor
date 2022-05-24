@@ -1,0 +1,61 @@
+﻿.main-menu-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    grid-template-areas:
+        "dashboard"
+        "houses"
+        "people"
+        "asset"
+        "phonebook";
+}
+
+    .main-menu-container ::deep a {
+        text-decoration: none;
+        color: black;
+        margin: auto 0 auto 15px;
+    }
+
+    .main-menu-container ::deep .dashboard {
+        grid-area: dashboard;
+    }
+
+    .main-menu-container ::deep .houses {
+        grid-area: houses;
+    }
+
+    .main-menu-container ::deep .people {
+        grid-area: people;
+    }
+
+    .main-menu-container ::deep .asset {
+        grid-area: asset;
+    }
+
+    .main-menu-container ::deep .phonebook {
+        grid-area: phonebook;
+    }
+
+    .main-menu-container ::deep .balance {
+        grid-area: balance;
+        visibility: collapse;
+    }
+
+@media(max-width: 1024px){
+    .main-menu-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 40px 40px;
+        grid-template-areas:
+            "dashboard houses people"
+            "asset phonebook balance";
+    }
+        .main-menu-container ::deep a {
+            margin:auto;
+        }
+
+        .main-menu-container ::deep .balance {
+            grid-area: balance;
+            visibility: visible;
+            margin:auto;
+        }
+}
