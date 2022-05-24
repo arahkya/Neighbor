@@ -2,10 +2,12 @@
 @import url('BlazorError.css');
 
 body {
+    --mobile-breakpoint: 600px;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 90vh;
     width: 90vw;
-    margin:auto;
+    margin: auto;
 }
 
 #app {
@@ -34,7 +36,7 @@ body {
     filter: drop-shadow(0px 0px 10px lightgray);
 }
 
-@media(max-width: 1024px){
+@media(max-width: 960px) {
     #app {
         display: grid;
         grid-template-columns: 1fr;

@@ -41,7 +41,7 @@
         visibility: collapse;
     }
 
-@media(max-width: 1024px){
+@media(max-width: 960px) {
     .main-menu-container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 40px 40px;
@@ -49,13 +49,14 @@
             "dashboard houses people"
             "asset phonebook balance";
     }
+
         .main-menu-container ::deep a {
-            margin:auto;
+            margin: auto;
         }
 
         .main-menu-container ::deep .balance {
             grid-area: balance;
             visibility: visible;
-            margin:auto;
+            margin: auto;
         }
 }
