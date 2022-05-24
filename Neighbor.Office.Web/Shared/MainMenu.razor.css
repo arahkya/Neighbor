@@ -1,19 +1,26 @@
 ﻿.main-menu-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px;
     grid-template-areas:
         "dashboard"
         "houses"
         "people"
         "asset"
-        "phonebook";
+        "phonebook"
+        "settings";
 }
 
     .main-menu-container ::deep a {
         text-decoration: none;
-        color: black;
+        color: gray;
         margin: auto 0 auto 15px;
+        transition: ease-in .3s;
+    }
+
+    .main-menu-container ::deep a:hover {
+        color:black;
+        transform: scale(1.2) translate(7%);
     }
 
     .main-menu-container ::deep .dashboard {
@@ -36,9 +43,8 @@
         grid-area: phonebook;
     }
 
-    .main-menu-container ::deep .balance {
-        grid-area: balance;
-        visibility: collapse;
+    .main-menu-container ::deep .settings {
+        grid-area: settings;
     }
 
 @media(max-width: 960px) {
@@ -47,16 +53,10 @@
         grid-template-rows: 40px 40px;
         grid-template-areas:
             "dashboard houses people"
-            "asset phonebook balance";
+            "asset phonebook settings";
     }
 
         .main-menu-container ::deep a {
-            margin: auto;
-        }
-
-        .main-menu-container ::deep .balance {
-            grid-area: balance;
-            visibility: visible;
             margin: auto;
         }
 }
