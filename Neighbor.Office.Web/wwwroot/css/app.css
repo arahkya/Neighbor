@@ -3,7 +3,6 @@
 
 body {
     --mobile-breakpoint: 600px;
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 90vh;
     width: 90vw;
@@ -16,11 +15,11 @@ body {
     grid-template-rows: auto;
     grid-template-areas:
         "top-header top-header"
-        "left-nav right-display";    
+        "left-nav right-display";
 }
 
 .top-header {
-    grid-area: top-header;    
+    grid-area: top-header;
 }
 
 .left-nav {
@@ -32,7 +31,7 @@ body {
     border: .3px solid #dcdcdc;
     border-radius: 5px;
     padding: 0px 25px 50px 25px;
-    background-color:white;
+    background-color: white;
     filter: drop-shadow(0px 0px 10px lightgray);
 }
 
@@ -57,6 +56,7 @@ body {
     border: .5px solid gray;
     border-radius: 5px;
     text-decoration: none;
+    text-align:center;
     color: black;
     font-size: .7rem;
     text-transform: uppercase;
@@ -67,12 +67,17 @@ body {
         filter: drop-shadow(0px 0px 5px lightslategray);
     }
 
-.color-primary {
-    background-color: darkblue;
-    color: white;
-}
+    .button.color-primary {
+        background-color: orangered;
+        color: white;
+    }
 
-.color-secondary {
-    background-color: lightslategray;
-    color: white;
-}
+    .button.color-secondary {
+        background-color: darkblue;
+        color: white;
+    }
+
+    .button.color-normal {
+        background-color: lightgray;
+        color: black;
+    }

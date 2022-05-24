@@ -1,0 +1,101 @@
+﻿.houses-menu {
+    padding: 0 0 30px 0;
+    display: grid;
+    grid-template-columns: .4fr .4fr 2fr .4fr .3fr;
+    grid-column-gap: 10px;
+}
+
+    .houses-menu input {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: .3px solid lightgray;
+        padding: 0px;
+    }
+
+    .houses-menu .total-items {
+        font-size: .8rem;
+        text-align: center;
+        padding: 10px 0 0 0;
+    }
+
+.table .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 150px 150px;
+    grid-template-rows: auto;
+}
+
+.table .cell {
+    font-size: .8rem;
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom: .3px solid lightgray;
+}
+
+
+.table .header {
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+.table .left {
+    text-align: left;
+}
+
+@media(max-width: 960px) {
+
+    .table .row .header {
+        display: none;
+    }
+
+    .table .row:not(:first-child) {
+        grid-template-columns: 80px repeat(2, 1fr);
+        grid-gap: 1px;
+        border: .5px solid gray;
+        border-radius: 5px;
+        margin: 10px 0;
+        grid-template-rows: 2fr;
+        grid-template-areas:
+            "l-id l-title l-title"
+            "l-id l-subtitle1 l-subtitle2";
+    }
+
+    .table .row .cell {
+        border: none;
+        padding: 10px;
+    }
+
+    .table .row .l-icon {
+        grid-area: l-icon;
+        display: none;
+    }
+
+    .table .row .l-id {
+        grid-area: l-id;
+        font-size: .7rem;
+        margin: auto;
+        background: cadetblue;
+        color: white;
+        padding: 20px 10px;
+        border-radius: 5px;
+    }
+
+    .table .row .l-title {
+        grid-area: l-title;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .table .row .l-subtitle1 {
+        grid-area: l-subtitle1;
+        font-size: .7rem;
+        text-align: left;
+    }
+
+    .table .row .l-subtitle2 {
+        grid-area: l-subtitle2;
+        font-size: .7rem;
+        text-align: left;
+    }
+}
